@@ -54,7 +54,7 @@ Each of these submodules have their own instructions for how to use them indepen
 6. Now you should have all three repositories that make up vista in the `VISTA/src/` directory. We'll now install the dependencies for each of the submodules starting with [Semantic-SplatBridge](https://github.com/StanfordMSL/Semantic-SplatBridge). 
     ```bash
     # Make sure your conda env is activated!
-    cd Semantic-SplatBridge
+    cd src/Semantic-SplatBridge
     pip install -e . 
     ```
 7. Install gsplat and ensure correct numpy version. 
@@ -88,6 +88,8 @@ Each of these submodules have their own instructions for how to use them indepen
     # pip install
     cd src/vista_plan
     pip install -e .
+
+    pip install tyro==0.7.0
     ```
 
 ## Run ROS2 example with rosbag
@@ -98,7 +100,7 @@ These instructions are designed to be run in three different terminal sessions. 
 1. [Terminal 1] Download the example `wagon` rosbag using the provided download script. This script creates a folder `VISTA/src/Semantic-SplatBridge/rosbags`, and downloads a rosbag to that directory.
     ```bash
     # Activate conda env
-    activate vista
+    conda activate vista
 
     # Run download script
     cd VISTA/src/Semantic-SplatBridge
@@ -128,13 +130,13 @@ These instructions are designed to be run in three different terminal sessions. 
     conda activate vista
     cd VISTA/src/VISTA-Plan
     source install/setup.bash
-    export PYTHONPATH="${PYTHONPATH}:/home/<user>/miniconda3/envs/vistaplan/lib/python3.10/site-packages"
+    export PYTHONPATH="${PYTHONPATH}:/home/<user>/miniconda3/envs/vista/lib/python3.10/site-packages"
     export PYTHONPATH="${PYTHONPATH}:/home/<user>/VISTA-Map"
     ```
 
 5. [Terminal 3] In the same terminal, run the launch file:
     ```bash
-    ros2 launch vista_plan waypoint_publisher.launch.py
+    ros2 launch vista_plan plan_publisher.launch.py
     ```
 
 6. [Terminal 2] Press the SPACE key to start playing the rosbag. Once the pre-training image buffer is filled then training should commence, and the usual Nerfstudio print messages will appear in Terminal 1. After a few seconds the Nerfstudio viewer should start to show the recieved images as camera frames, and the Splatfacto model should begin be filled out.
