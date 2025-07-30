@@ -1,12 +1,9 @@
 [submodule "src/Semantic-SplatBridge"]
 	path = src/Semantic-SplatBridge
 	url = git@github.com:StanfordMSL/Semantic-SplatBridge.git
-        branch = main
 [submodule "src/VISTA-Plan"]
 	path = src/VISTA-Plan
 	url = git@github.com:StanfordMSL/VISTA-Plan.git
-        branch = main
 [submodule "src/VISTA-Map"]
 	path = src/VISTA-Map
 	url = git@github.com:StanfordMSL/VISTA-Map.git
-	branch = main
