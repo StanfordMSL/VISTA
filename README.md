@@ -2,6 +2,9 @@
 ArXiv: <https://arxiv.org/abs/2507.01125>.
 
 Repository for VISTA, including Real-Time Semantic Gaussian Splatting, voxel grid generation, and semantic exploration & planning, presented in our paper. This repository includes scripts and ROS2 nodes required for running quadrotor experiments.
+<p align="center">
+<img src= system.png height="500">
+</p>
 
 ## Requirements
 - A Linux machine (tested with Ubuntu 22.04)
@@ -161,7 +164,7 @@ Once the terminal in Terminal 1 shows that the Gaussian Splat is waiting to rece
 conda activate vista
 cd VISTA/src/VISTA-Plan
 source install/setup.bash
-export PYTHONPATH="${PYTHONPATH}:/home/<user>/miniconda3/envs/vistaplan/lib/python3.10/site-packages"
+export PYTHONPATH="${PYTHONPATH}:/home/<user>/miniconda3/envs/vista/lib/python3.10/site-packages"
 export PYTHONPATH="${PYTHONPATH}:/home/<user>/VISTA-Map"
 ros2 launch vista_plan waypoint_publisher.launch.py
 ```
