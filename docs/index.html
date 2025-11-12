@@ -24,7 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Academic Project Page</title>
+  <title>VISTA: Open-Vocabulary, Task-Relevant Robot Exploration with Online Semantic Gaussian Splatting</title>
   <link rel="icon" type="image/x-icon" href="static/images/msl.png">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -172,7 +172,83 @@
     </div>
   </section>
 
+<!-- Image carousel -->
+ <section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="container">
+      <h2 class="title">Semantic SplatBridge</h2>
+      <div class="columns is-centered has-text-centered">
+      <video width="425" height="320" poster="" id="tree" autoplay controls muted loop height="100%">
+        <!-- Your video here -->
+        <source src="static/videos/real-time.mp4"
+        type="video/mp4">
+      </video>
+            <video width="425" height="320" poster="" id="tree" autoplay controls muted loop height="100%">
+        <!-- Your video here -->
+        <source src="static/videos/semantic.mp4"
+        type="video/mp4">
+      </video>
+      </div>
+      <h2 class="subtitle has-text-centered">
+      Our Semantic Gaussian Splatting pipeline provides real-time training of the environment map as the quadrotor is flying.
+      </h2>
+    </div>
+  </section>
 
+
+<!-- Image carousel -->
+ <section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="container">
+      <h2 class="title">VISTA-Map</h2>
+      <div class="columns is-centered has-text-centered">
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <!-- Your video here -->
+        <source src="static/videos/voxel-map.mov"
+        type="video/mp4">
+      </video>
+      </div>
+      <h2 class="subtitle has-text-centered">
+      Information from the Gaussian Splat is transferred to a voxel grid representation to allow for fast planning and information gain computation. 
+      </h2>
+    </div>
+  </section>
+
+  <!-- Image carousel -->
+ <section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="container">
+      <h2 class="title">VISTA-Score</h2>
+      <div class="columns is-centered has-text-centered">
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <!-- Your video here -->
+        <source src="static/videos/gain-metric.mov"
+        type="video/mp4">
+      </video>
+      </div>
+      <h2 class="subtitle has-text-centered">
+      Leveraging the voxel grid representation, we compute a voxel centric information gain metric, where each voxel holds information about the directions it has been viewed from so far. The information gain of a new view-point can be determined via the <strong>coverage</strong> the new rays would provide.
+      </h2>
+    </div>
+  </section>
+
+    <!-- Image carousel -->
+ <section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="container">
+      <h2 class="title">VISTA-Plan</h2>
+      <div class="columns is-centered has-text-centered">
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <!-- Your video here -->
+        <source src="static/videos/planning.mov"
+        type="video/mp4">
+      </video>
+      </div>
+      <h2 class="subtitle has-text-centered">
+      A Gaussian Mixture Model (GMM) <strong>biases</strong> trajectories toward frontier voxels and high semantic similarity points.
+      </h2>
+    </div>
+  </section>
 
 <!-- Youtube video -->
 <section class="hero is-small is-light">
